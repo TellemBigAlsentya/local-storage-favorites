@@ -22,7 +22,7 @@ hr {
     display: flex;
     flex-direction: column;
     min-height: 770px;
-    height: window;
+    height: 800px;
     min-width: 200px;
     border: solid gold 3px;
     color: black;
@@ -36,6 +36,7 @@ hr {
     position: relative;
     background-image: url(img/corkboard-background.jpeg);
     background-size: 300px;
+    overflow: scroll;
 }
 #favorite-container h1 {
     display: flex;
@@ -79,6 +80,24 @@ hr {
     height: 770px;
     overflow: scroll;
 }
+#previous-page {
+    margin-top: 5px;
+    text-align: center;
+}
+#previous-page:hover {
+    opacity: 70%;
+    border: solid 3px gold;
+    cursor: grab;
+}
+#next-page {
+    margin-bottom: 5px;
+    text-align: center;
+}
+#next-page:hover {
+    opacity: 70%;
+    border: solid 3px gold;
+    cursor: grab;
+}
 .title-bar {
     display: flex;
     border: solid rgb(116, 246, 41) 3px;
@@ -106,7 +125,7 @@ hr {
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    overflow: scroll;
+    overflow-y: scroll;
     box-shadow: 3px 3px 5px #333;
     position: relative;
 }
@@ -160,21 +179,6 @@ hr {
     align-items: center;
     cursor: pointer; 
     
-}
-#empty-favorite-message {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(150, 206, 255);
-    font-family: fantasy;
-    box-shadow: 2px 2px 2px; 
-}
-#empty-favorite-message p {
-    justify-self: center;
-    margin: 5px;
-    font-size: 20px;
 }
 .favoriteCard {
     display: flex;
@@ -246,22 +250,4 @@ hr {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-left: 5px;
-}
-#previous-page {
-    margin-top: 5px;
-    text-align: center;
-}
-#previous-page:hover {
-    opacity: 70%;
-    border: solid 3px gold;
-    cursor: grab;
-}
-#next-page {
-    margin-bottom: 5px;
-    text-align: center;
-}
-#next-page:hover {
-    opacity: 70%;
-    border: solid 3px gold;
-    cursor: grab;
 }

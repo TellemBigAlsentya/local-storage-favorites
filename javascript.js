@@ -55,7 +55,6 @@ function createCharacterCards(array) {
                 favoriteIcon.src = 'img/favorite-heart.svg';
                 favoriteIcon.classList.add('favorited');
             } else {favoriteIcon.src = 'img/not-favorite-heart.svg';}
-            favoriteIcon.dataset.index = `${array[i].id}`;
             favoriteIcon.classList.add('favoriteButton');
             newCard.id = array[i].id;
             cardTitle.innerText = `${array[i].name}`;
@@ -150,9 +149,7 @@ async function getFavoriteData(characterID) {
     let APIresponse = await APIfetch.json(); 
     if(!APIresponse.length) {
         pinFavorite(APIresponse); 
-        //console.log('option 1');
     } else if(APIresponse.length) {
-        //console.log('option 2');
         APIresponse.forEach(characterObj => pinFavorite(characterObj));
     } else {console.error('this APIfetch is not returning the correct data type');}
 }
@@ -198,7 +195,6 @@ function doThisOnClick(event) {
         let unFavoriteCard = document.getElementById(`favorite-card-${characterID}`);
         favoriteBar.removeChild(unFavoriteCard); 
     }
-    
 }
 
 // HELPER FUNCTIONS
@@ -210,10 +206,8 @@ function changeHeartDisplay(event) {
     event.target.classList.toggle('favorited');
     if(event.target.classList.contains('favorited')) {
         event.target.src = 'img/favorite-heart.svg';
-        console.log('this is now a favorite');
     } else { 
         event.target.src = 'img/not-favorite-heart.svg';
-        console.log('this is now NOT a favorite');
     } 
 }
 function checkFaves(id) {
