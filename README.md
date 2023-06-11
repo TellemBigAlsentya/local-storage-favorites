@@ -1,5 +1,7 @@
 # local-storage-favorites
-An app for favoriting Rick and Morty characters and saving them to local storage 
+An app for favoriting Rick and Morty characters and saving them to local storage. 
+
+Please visit the deployed version of this project via [Netlify here](https://local-storage-favorites.netlify.app/). 
 
 ## App Objective
 Create a web app for viewing characters from the Rick and Morty API. This app allows the user to add and remove characters from their favorites and view a list of their favorites, as well as browse the full list of characters available from the API. 
